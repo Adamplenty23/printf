@@ -52,14 +52,3 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	return (count);
 }
-
-int main(void)
-{
-	char a = 'a';
-	char str[20] = "adam";
-
-    _printf("Hi %s, Let's try to printf %c simple sentence, if it works perfectly fine..i give you 100%%.\n", str, a);
-    printf("Let's try to printf a simple sentence.\n");
-
-    return 0;
-}
