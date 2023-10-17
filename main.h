@@ -7,7 +7,7 @@
 #include <stddef.h>
 #include <unistd.h>
 
-
+int _putstr(char *str);
 int _printf(const char *format, ...);
 int _putchar(char a);
 
