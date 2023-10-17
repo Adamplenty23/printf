@@ -1,52 +1,46 @@
 #include "main.h"
 /**
  * _printf - A custom printf function
- *
- * format: THis is a character strings
- *
+ * @format: THis is a character strings
  * Return: lenght of string
  */
-
 int _printf(const char *format, ...)
 {
 	int count;
 	int i;
 	va_list arg;
-	va_start(arg, format);
-	
-	count = 0;
+	char c;
+	char *str;
 
+	va_start(arg, format);
+	count = 0;
 	if (format == NULL)
 		return (-1);
-
-       	for (i = 0; format[i] != '\0'; i++) 
+	for (i = 0; format[i] != '\0'; i++)
 	{
-        	if (format[i] != '%') 
-		{
-			_putchar(format[i]);
-			count++;
-	       	}
-		else
+		if (format[i] == '%')
 		{
 			i++;
 			if (format[i] == 'c')
 			{
-				char character = va_arg(arg, int);
-				_putchar(character);
+				c = va_arg(arg, int);
+				count += _putchar(c);
 				count++;
 			}
 			else if (format[i] == 's')
 			{
-				char *str = va_arg(arg, char *);
-				_putstr(str);
-				count++;
+				str = va_arg(arg, char *);
+				count += _putstr(str);
 			}
 			else if (format[i] == '%')
 			{
-				_putchar('%');
-				count++;
+				count += _putchar('%');
 			}
-			i++;
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			count++;
 		}
 	}
 	va_end(arg);
