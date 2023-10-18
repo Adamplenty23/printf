@@ -9,7 +9,7 @@
 int (*call_fn(char test))(va_list)
 {
 		int count = 0;
-		fs spec[] = {
+		struct fs spec[] = {
 			{'c', _putchar},
 			{'s', _putstr},
 			{'i', _putchar},
