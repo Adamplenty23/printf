@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			test = format[i];
 			if (test == 'c' || test == 's' || test == 'd' || test == 'i')
 			{
 				count += (call_fn(test))(arg);

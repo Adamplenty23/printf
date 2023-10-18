@@ -8,20 +8,20 @@
 #include <unistd.h>
 
 /**
- * struct formatSpecifier - a struct for format specifier
+ * struct fs - a struct for format specifier
  * @specifier: the character to determine the format spec
  * @hnd: the pointer to function
  */
-typedef struct formatSpecifier
+struct fs
 {
 	char specifier;
-	void (*hnd)(va_list);
-} fs;
+	int (*hnd)(va_list);
+};
 
 int _putstr(va_list);
 int _printf(const char *format, ...);
 int _putchar(va_list);
-int (call_fn(char test)(va_list));
+int (*call_fn(char test))(va_list);
 #endif
 
 

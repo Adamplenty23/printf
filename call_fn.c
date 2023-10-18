@@ -2,7 +2,7 @@
 
 /**
  * call_fn - caller function to print specifier
- * @test: list value
+ * @test: l  ist value
  * Return: 0 success
  */
 
@@ -21,8 +21,8 @@ int (*call_fn(char test))(va_list)
 			if (test == spec[count].specifier)
 			{
 				return (spec[count].hnd);
-				count++;
 			}
+				count++;
 		}
 		return (NULL);
 }
