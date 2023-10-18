@@ -10,16 +10,17 @@
 int _putstr(char *str);
 int _printf(const char *format, ...);
 int _putchar(char a);
+int (call_fn(fater)(va_list);
 
 typedef struct formatSpecifier
 {
         char specifier;
-        void (*handler)(va_list args);
+        void (*hnd)(va_list);
 } fs;
 
-void _char(va_list args);
-void _string(va_list args);
-void _percent(va_list args);
+void _char(va_list);
+void _string(va_list);
+void _percent(va_list);
 
 
 

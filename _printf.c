@@ -21,22 +21,10 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c')
+			if (test == 'c' || test == 's' || test == 'd' || test == 'i')
 			{
-				c = va_arg(arg, int);
-				count += _putchar(c);
-				count++;
+				count += (call_fn(test))(arg);
 			}
-			else if (format[i] == 's')
-			{
-				str = va_arg(arg, char *);
-				count += _putstr(str);
-			}
-			else if (format[i] == '%')
-			{
-				count += _putchar('%');
-			}
-		}
 		else
 		{
 			write(1, &format[i], 1);

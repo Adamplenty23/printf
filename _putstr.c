@@ -6,8 +6,9 @@
  *
  * Return: nothing
  */
-int _putstr(char *str)
+int _putstr(va_list arg)
 {
+	char *str = va_arg(arg, char *);
 	int i;
 	int count;
 
