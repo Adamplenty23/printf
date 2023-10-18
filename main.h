@@ -11,11 +11,18 @@ int _putstr(char *str);
 int _printf(const char *format, ...);
 int _putchar(char a);
 int (call_fn(char test)(va_list);
+/**
+ * struct - a struct for format specifier
+ * /**
+ * struct - a struct for format specifier
+ * @
+ * @formatSpecifier: structure_tag
+ */ 
 
 typedef struct formatSpecifier
 {
-        char specifier;
-        void (*hnd)(va_list);
+	char specifier;
+	void (*hnd)(va_list);
 } fs;
 
 void _char(va_list);
