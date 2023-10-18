@@ -6,6 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
+	char test;
 	int count;
 	int i;
 	va_list arg;
@@ -25,6 +26,7 @@ int _printf(const char *format, ...)
 			{
 				count += (call_fn(test))(arg);
 			}
+		}
 		else
 		{
 			write(1, &format[i], 1);

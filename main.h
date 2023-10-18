@@ -7,45 +7,21 @@
 #include <stddef.h>
 #include <unistd.h>
 
-int _putstr(char *str);
-int _printf(const char *format, ...);
-int _putchar(char a);
-int (call_fn(char test)(va_list);
 /**
- * struct - a struct for format specifier
- * /**
- * struct - a struct for format specifier
- * @
- * @formatSpecifier: structure_tag
- */ 
-
+ * struct formatSpecifier - a struct for format specifier
+ * @specifier: the character to determine the format spec
+ * @hnd: the pointer to function
+ */
 typedef struct formatSpecifier
 {
 	char specifier;
 	void (*hnd)(va_list);
 } fs;
 
-void _char(va_list);
-void _string(va_list);
-void _percent(va_list);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+int _putstr(va_list);
+int _printf(const char *format, ...);
+int _putchar(va_list);
+int (call_fn(char test)(va_list));
 #endif
 
 
