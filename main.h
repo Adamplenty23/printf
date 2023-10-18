@@ -10,7 +10,7 @@
 int _putstr(char *str);
 int _printf(const char *format, ...);
 int _putchar(char a);
-int (call_fn(fater)(va_list);
+int (call_fn(char test)(va_list);
 
 typedef struct formatSpecifier
 {
